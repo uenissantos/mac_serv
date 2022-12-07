@@ -1,7 +1,10 @@
 import {React } from 'react'
-import { Menu } from '../menu/Menu'
-import{BrowserRouter, Routes, Route} from 'react-router-dom'
-
+import{ Routes, Route} from 'react-router-dom'
+import { About } from '../About/About'
+import { Climatizacao } from '../Climatizacao/Climatizacao'
+import{Home} from '../Home/Home'
+import { Politica } from '../Politica/Politica'
+import { Principal } from '../principal/Principal'
 import *  as Styled from './styles'
 
 function App() {
@@ -10,16 +13,20 @@ function App() {
 
 <Styled.App>
 
-
-<BrowserRouter>
 <Routes>
 
-<Route  path='/' element={<Menu/>}/>
+<Route  element={<Home/>}>
+<Route path='/'   element={<Principal/>} />
+<Route path='/sobre'   element={<About/>} />
+<Route path='/politica'   element={<Politica/>} />
+<Route path='/climatizacao'   element={<Climatizacao/>} />
+
+</Route>
 
 </Routes>
 
 
-</BrowserRouter>
+
 </Styled.App>
 
 

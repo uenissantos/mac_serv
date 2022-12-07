@@ -9,7 +9,6 @@ background-color: ${theme.colors.black};
 display: flex;
 justify-content:space-between;
 align-items: center;
-
 display: none;
 a{
 	color:gray
@@ -68,26 +67,39 @@ display: flex;
 
 
 export const Menu = styled.nav`
-${({ theme }) => css`
+${({ theme, menu }) => css`
 background-color: ${theme.colors.background};
 width: 100vw;
-height: 25vh;
+
+.bottonMenu{
+	position: relative;
+	left: 90%;
+	top: 3rem;
+
+	height: 35px;
+	width: 35px;
+
+
+	svg{
+		height: 100%;
+		width: 100%;
+	}
+}
 
 
 ul{
 
-display: flex;
+display: ${menu ? 'flex' : 'none'};
 flex-direction: column;
 width: 100%;
 
+
+}
 img{
 height: 90px;
 width: 90px;
 margin-left: 25px;
 }
-
-}
-
 
 
 .titulo{
@@ -100,7 +112,7 @@ justify-content: space-between;
 text-align: center;
 a,p{
 	margin-left: 15px;
-color:#5A5B5F;
+color:${theme.colors.font};
 font-weight: bold;
 
 &:hover{

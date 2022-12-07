@@ -7,7 +7,9 @@ export const theme = {
 		secundaryColor: '#f58635',
 		ligth: '#C0C0C0',
 		black: '#363435',
-		border: '#ede8e8'
+		border: '#ede8e8',
+		font: '#5A5B5F'
+
 	},
 	sizes: {
 		smaller: '1.6rem',

@@ -3,13 +3,14 @@ import *  as Styled from './styles'
 import { MyLink } from '../../components/Link';
 import { MdOutlineEmail ,MdOutlineKeyboardArrowDown} from 'react-icons/md';
 import { BsFillTelephoneFill ,BsLinkedin} from 'react-icons/bs';
+import { IoMdMenu,IoMdClose } from 'react-icons/io';
 
 import logo from '../../assets/logo.png'
 
 export const Menu = () => {
 
-const [hove, setHove] = useState(false);
-
+const [menu, setMenu] = useState(false);
+const handleMenu=()=> setMenu(!menu)
 
 
 
@@ -49,7 +50,6 @@ const [hove, setHove] = useState(false);
 		}
 	   )();
 
-console.log(hove);
 return (
 
 
@@ -58,7 +58,7 @@ return (
 
 
 
-<Styled.Menu  hove={hove}>
+<Styled.Menu menu={menu}>
 	<Styled.Contato>
 
 	<div  className='contato'>
@@ -84,11 +84,17 @@ return (
 
 
 </Styled.Contato>
-<ul>
+
+
+  <button  className='bottonMenu' onClick={handleMenu} >{ menu? <IoMdClose/>:<IoMdMenu/>} </button>
+
 <div   className='image'>
 	<img  src={logo} alt="logo" />
 
 </div>
+
+<ul>
+
 
 
 
@@ -101,9 +107,9 @@ return (
 
   <summary className='titulo' >  <p>EMPRESA </p>    <MdOutlineKeyboardArrowDown/></summary>
   <div  className='infor'>
-	  <MyLink>Sobre Nós</MyLink>
+	  <MyLink href='/sobre'>Sobre Nós</MyLink>
 
-  <MyLink>Política</MyLink>
+  <MyLink  href='/politica'>Política</MyLink>
 </div>
 
 </details>
@@ -115,7 +121,7 @@ return (
   <summary  className='titulo' >  <p> SERVIÇOS </p>     <MdOutlineKeyboardArrowDown/>  </summary>
 
 <div  className='infor'>
-	  <MyLink>Climatização</MyLink>
+	  <MyLink href='/climatizacao'>Climatização</MyLink>
   <MyLink>Locação de mão de obra</MyLink>
   <MyLink>Manutenção Predial</MyLink>
   <MyLink>Aluquel de Maquinas e equipamentos</MyLink>
