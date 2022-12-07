@@ -59,7 +59,7 @@ display: flex;
 flex-direction: column;
 	height: 324px;
 	justify-content: center;
-
+margin-left: 25px;
 h3{
 	color:#ffffff;
 	font-size: 20px;
@@ -140,11 +140,10 @@ justify-content: center;
 }
 
 img{
-	height: 200%;
-	width: 200%;
+	height: 150%;
+	width: 150%;
 background-color: ${theme.colors.ligth};
-margin-left: 0px;
-
+margin: 2px auto;
 }
 
 
