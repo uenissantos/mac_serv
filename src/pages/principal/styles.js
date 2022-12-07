@@ -5,6 +5,10 @@ ${({ theme }) => css`
 text-align: center;
 width: 100vw;
 overflow-x: hidden;
+display: flex;
+flex-direction: column;
+align-items: center;
+
 
 .tituloCarousel{
 display: flex;
@@ -59,17 +63,14 @@ img{
 .logo{
 
 height: 60px;
-margin-top: 50px;
+margin: 50px   auto;
 
 }
 
-p{
-	font-size: 22px;
+.titleLogo{
+	font-size: 20px;
 	color:${theme.colors.font};
-	margin:0px  auto 25px auto;
-	letter-spacing: 1px;
-	padding: 35px;
-	max-width: 550px;
+	width: 350px;
 
 }
 
@@ -93,9 +94,7 @@ p{
 	font-size: 18px;
 	color:${theme.colors.ligth};
 width:350px;
-padding: 3px;
-margin-left: 25px;
-
+margin: 2px auto;
 }
 
 
@@ -112,6 +111,7 @@ margin-left: 25px;
 flex-direction: column;
 	height: 637px;
 justify-content: space-between;
+align-items:center
 
 
 }
@@ -122,7 +122,6 @@ flex-direction: row;
 align-items: center;
 text-align: start;
 justify-content:space-evenly;
-
 
 h2{
 	height: 50px;
@@ -145,8 +144,7 @@ margin: 12px auto   ;
 p{
 	font-size: 18px;
 	padding: 10px;
-	width:345px;
-margin: 4vw    ;
+	width:320px;
 }
 
 
@@ -160,6 +158,7 @@ margin: 4vw    ;
 align-items: center;
 justify-content: center;
 height: 355px;
+width: 100vw;
 h2{
 font-size: 36px;
 color:#ffffff;
@@ -204,6 +203,13 @@ a{
 
 
 
+
+
+
+
+
+
+
 svg{
 	position: relative;
 	right: -40px;
@@ -215,6 +221,17 @@ svg{
 
 }
 
+
+${theme.breakpoints.lg}{
+
+
+
+
+p{
+	margin:10px auto;
+}
+
+}
 
 
 `}

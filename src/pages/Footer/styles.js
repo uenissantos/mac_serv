@@ -89,7 +89,7 @@ margin-top: 20px;
 
 .social{
 height: 106px;
-
+margin-left: 25px;
 h2{
 font-size: 20px;
 color: #ffffff;
@@ -118,7 +118,6 @@ border-radius: 20px;
 }
 
 .meuContato{
-	border: 2px solid blue;
 	height: 70px;
 	display: flex;
 	width: 100vw;
@@ -126,6 +125,9 @@ border-radius: 20px;
 align-items: center;
 justify-content: center;
 
+h2{
+	margin: 2px 10px;
+}
 
 a{
 
@@ -136,14 +138,12 @@ a{
 	display: flex;
 align-items: center;
 justify-content: center;
-
 }
 
 img{
 	height: 150%;
 	width: 150%;
 background-color: ${theme.colors.ligth};
-margin: 2px auto;
 }
 
 

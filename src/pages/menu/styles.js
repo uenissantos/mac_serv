@@ -11,6 +11,7 @@ display: flex;
 justify-content:space-between;
 align-items: center;
 display: none;
+overflow-x: hidden;
 a{
 	color:gray
 }
