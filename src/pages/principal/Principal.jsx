@@ -11,6 +11,7 @@ import {Button} from '../../components/Buttom/Button'
 import {AiOutlineCheckCircle} from 'react-icons/ai'
 import {SlUser,SlDocs,SlLocationPin,SlDoc} from 'react-icons/sl'
 import {MdDirectionsCarFilled} from 'react-icons/md'
+import {RiArrowRightSLine} from 'react-icons/ri'
 
 
 
@@ -60,7 +61,7 @@ autoPlay={true}
 	</div>
 
 
-<Image  src={logo2}/>
+<Image className='logo' src={logo2}/>
 
 <Text>
 Administrada por seus fundadores, a MacServ é conduzida por uma gestão profissional e participativa que envolve
@@ -142,7 +143,7 @@ todos os níveis hierárquicos alicerçada nos pilares da confiança e do respei
 	<Text as='h2'> Fale diretamente com   </Text>
 <Text as="h2">  nossa equipe </Text>
 <Text as="h2"> comercial</Text>
-<Button><MyLink src="">  ENVIAR E-MAIL  </MyLink> </Button>
+<Button><MyLink src="">  ENVIAR E-MAIL  <RiArrowRightSLine/> </MyLink> </Button>
 
 
 </div>

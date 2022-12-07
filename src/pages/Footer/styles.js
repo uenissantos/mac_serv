@@ -2,6 +2,8 @@ import styled, { css } from 'styled-components';
 
 export const Footer = styled.footer`
 ${({ theme }) => css`
+width: 100%;
+overflow-y: hidden;
 
 background-color: ${theme.colors.black};
 p,
@@ -10,8 +12,8 @@ img,
 h3,
 h2{
 	margin-left: 25px;
-		color: ${theme.colors.ligth};
-padding: 7px;
+	color: ${theme.colors.ligth};
+     padding: 7px;
 }
 
 a{ font-size: 15px;}
@@ -19,12 +21,11 @@ a{ font-size: 15px;}
 .endereco{
 	display: flex;
 	flex-direction:column;
-	height:314px;
-
-
+	height:284px;
+margin-left: 25px;
 img{
 	width: 150px;
-	margin: 50px  25px 25px 25px;
+	margin: 50px  0 25px 0;
 }
 
 

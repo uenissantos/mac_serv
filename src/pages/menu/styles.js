@@ -5,6 +5,7 @@ export const Contato = styled.div`
 ${({ theme }) => css`
 height: ${theme.sizes.small};
 width: 100%;
+overflow-x: hidden;
 background-color: ${theme.colors.black};
 display: flex;
 justify-content:space-between;
@@ -73,7 +74,7 @@ width: 100vw;
 
 .bottonMenu{
 	position: relative;
-	left: 90%;
+	left: 85%;
 	top: 3rem;
 
 	height: 35px;
@@ -92,13 +93,13 @@ ul{
 display: ${menu ? 'flex' : 'none'};
 flex-direction: column;
 width: 100%;
-
+margin-top: 45px;
 
 }
 img{
 height: 90px;
 width: 90px;
-margin-left: 25px;
+margin-left: 1rem;
 }
 
 
@@ -131,14 +132,14 @@ height: 55px;
 
 }
 .infor{
+	margin-top: -25px;
 	display: flex;
 	flex-direction: column;
 	a{
 		color: gray;
-		height: 45px;
+		height: 40px;
 		border-top: 1px solid ${theme.colors.border};
-		padding: 25px;
-
+		padding:10px 25px 0;
 
 		&:hover{
 	color:${theme.colors.secundaryColor}
