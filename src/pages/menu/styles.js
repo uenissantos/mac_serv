@@ -11,7 +11,6 @@ display: flex;
 justify-content:space-between;
 align-items: center;
 display: none;
-overflow-x: hidden;
 a{
 	color:gray
 }
@@ -100,7 +99,7 @@ margin-top: 45px;
 img{
 height: 90px;
 width: 90px;
-margin-left: 1rem;
+margin-left: 2rem;
 }
 
 
@@ -155,53 +154,44 @@ height: 55px;
 
 
 ${theme.breakpoints.xl}{
-
-ul{
-flex-direction: row;
-height: ${theme.sizes.big};
+	height: 8.5rem;
+.bottonMenu{
+	display: none;
 }
-
-details{
-	height: ${theme.sizes.big};
-width: 150px;
-}
-.titulo{
-width: 10vw;
-justify-content: space-evenly;
-
-svg{
-display: none;
-
-}
-a,p{
-	margin-left: 0px ;
-	margin-top: 3rem;
-height: 35px;
-width: 120px;
-}
-}
-
 
 .image{
-width: 40vw;
-
-img{
-	height: 100px;
-width: 100px;
-}
+margin: 10px 45px;
 
 }
+
+ul{
+	display: flex;
+	flex-direction: row;
+	width: 55vw;
+	position: relative;
+justify-content: space-around;
+bottom: 70px;
+left: 40%;
+}
+
+.titulo{
+width: 150px;
+
+svg{
+	display: none
+}
+}
+
 
 .infor{
-margin-top: 50px;
-width: 280px;
 
+background-color: ${theme.colors.background};
+background-color: white;
+z-index: 25;
+position: absolute;
+margin-top: 1px;
+border-top: 2px solid ${theme.colors.secundaryColor};
 }
-
-}
-
-
-
 
 `}
 `;
