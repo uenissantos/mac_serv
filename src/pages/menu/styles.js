@@ -94,7 +94,7 @@ display: ${menu ? 'flex' : 'none'};
 flex-direction: column;
 width: 100%;
 margin-top: 45px;
-
+padding-top: 10px;
 }
 img{
 height: 90px;

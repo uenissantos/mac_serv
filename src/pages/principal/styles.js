@@ -32,6 +32,7 @@ font-weight: bold;
 
 p{
 	display: none;
+	width: 300px;
 
 }
 
@@ -164,6 +165,7 @@ font-size: 36px;
 color:#ffffff;
 font-weight: bold;
 margin: 10px;
+width: 320px;
 }
 
 
@@ -175,7 +177,7 @@ margin-top: 25px;
 	width: 194px;
 	height: 47px;
 
-
+overflow: hidden;
 
 &:hover{
 border: none;
@@ -224,14 +226,136 @@ svg{
 
 ${theme.breakpoints.lg}{
 
+	.tituloCarousel{
+h2{
+	font-size: 28px;
+	width: 450px;
+
+}
+p{
+		 display: flex;
+	}
+}
+
+p{
+	display: flex;
+}
+
+
+.titleLogo{
+	width: 550px;
+}
+
+
+.apresentacao{
+
+img{
+	height: 500px;
+}
 
 
 
 p{
-	margin:10px auto;
+width: 440px;
+padding: 5px;
+}
+& :nth-child(3){
+
+width: 440px;
+}
+}
+
+
+.check{
+margin-top: 25px;
+
+}
+}
+
+
+.enviarEmail{
+
+h2{
+	width: 500px;
+}
 }
 
 }
+${theme.breakpoints.xl}{
+
+
+.tituloCarousel{
+h2{
+	font-size:50px;
+	width: 90%;
+
+}
+
+
+p{
+
+	font-size: 24px;
+	width: 800px;
+
+}
+
+
+}
+
+
+.carousel{
+	height: 70vh;
+
+img{
+	height: 100%;
+}
+
+}
+
+.logo{
+	height: 90px;
+}
+
+.titleLogo{
+
+	width: 1000px;
+	font-size: 24px;
+}
+
+.apresentacao{
+	display: flex;
+height: 460px;
+	align-items: center;
+
+p{
+	margin-left: 45px;
+}
+}
+
+
+
+.check{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+height: 265px;
+}
+
+
+
+.enviarEmail{
+
+	h2{
+width: 1000px;
+	}
+}
+
+
+}
+
+
+
+
+
 
 
 `}

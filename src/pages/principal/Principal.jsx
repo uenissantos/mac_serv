@@ -149,9 +149,9 @@ export const Principal = () => {
       </div>
 
       <div className="enviarEmail">
-        <Text as="h2"> Fale diretamente com </Text>
-        <Text as="h2"> nossa equipe </Text>
-        <Text as="h2"> comercial</Text>
+        <Text as="h2"> Fale diretamente com nossa equipe comercial</Text>
+        <Text as="h2"> </Text>
+        <Text as="h2"> </Text>
         <Button>
           <MyLink src="">
             {" "}
