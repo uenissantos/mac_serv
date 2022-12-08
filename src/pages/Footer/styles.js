@@ -146,8 +146,33 @@ img{
 background-color: ${theme.colors.ligth};
 }
 
+}
 
 
+
+${theme.breakpoints.lg}{
+
+.footer{
+	display: grid;
+
+grid-template-columns: 1fr 1fr;
+}
+
+
+}
+
+
+${theme.breakpoints.xl}{
+
+.footer{
+
+grid-template-columns: 1fr 1fr 1fr;
+}
+
+.social{
+	margin-top: 50px;
+	width: 300px;
+}
 
 }
 

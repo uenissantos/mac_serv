@@ -270,7 +270,7 @@ width: 440px;
 margin-top: 25px;
 
 }
-}
+
 
 
 .enviarEmail{
