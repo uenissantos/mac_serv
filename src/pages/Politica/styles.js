@@ -7,36 +7,31 @@ h2,a,h1{
 
 }
 
-h2{
-	font-size: 18px ;
-	margin: 45px  25px 48px;
-	height: 50px;
-}
-
-.menuSecundario{
-	width: 100vw;
-
-height: 155px;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-font-size: 26px;
-a{
-	font-size: 16px;
-	padding:3px;
-}
 
 
-span{
 
-	font-size: 16px;
-	color:${theme.colors.ligth} ;
-}
-}
 
 .politica{
-	border: 1px solid red;
+	margin-left: 25px;
+display: flex;
+flex-direction: column;
+img{
+width: 250px;
+height: 350px;
+margin: 10px;
+border-radius: 10px;
+
+}
+
+.itensPolitica{
+
+display: flex;
+flex-direction: column;
+
+}
+
+
+
 
 	button{
 	background-color:${theme.colors.primaryColor};
@@ -49,6 +44,36 @@ span{
 
 
 }
+
+${theme.breakpoints.lg}{
+
+.politica{
+margin-left: 40px;
+	img{
+		width: 350px;
+		height: 450px;
+	}
+}
+
+}
+
+${theme.breakpoints.xl}{
+
+.politica{
+display: grid;
+grid-template-columns: 1fr  1fr 1fr;
+
+img{
+	width: 250px;
+height: 350px;
+
+}
+
+}
+
+}
+
+
 
 
 `}

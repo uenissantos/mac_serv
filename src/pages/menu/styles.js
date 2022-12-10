@@ -88,18 +88,23 @@ width: 100vw;
 }
 
 
-ul{
+.listaMenu{
 
 display: ${menu ? 'flex' : 'none'};
 flex-direction: column;
 width: 100%;
-margin-top: 45px;
-padding-top: 10px;
+margin-top: 3rem;
+
 }
-img{
+.image{
+margin:-35px 25px -25px  2rem;
 height: 90px;
+margin-bottom: 10px;
+img{
+	height: 90px;
 width: 90px;
-margin-left: 2rem;
+}
+
 }
 
 
@@ -164,9 +169,10 @@ margin: 10px 45px;
 
 }
 
-ul{
+.listaMenu{
 	display: flex;
 	flex-direction: row;
+	margin-top: 10px;
 	width: 55vw;
 	position: relative;
 justify-content: space-around;
@@ -176,7 +182,7 @@ left: 40%;
 
 .titulo{
 width: 150px;
-
+border: none;
 svg{
 	display: none
 }
@@ -192,6 +198,6 @@ position: absolute;
 margin-top: 1px;
 border-top: 2px solid ${theme.colors.secundaryColor};
 }
-
+}
 `}
 `;

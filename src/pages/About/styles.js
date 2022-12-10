@@ -11,28 +11,6 @@ h1,h2,p,a{
 }
 
 
-.menuSecundario{
-	width: 100vw;
-
-	height: 154px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	font-size: 26px;
-
-	a{
-		font-size: 16px;
-		padding:3px;
-	}
-
-
-	span{
-
-		font-size: 16px;
-		color:${theme.colors.ligth} ;
-	}
-}
-
 .solucao{
 height: 1100px;
 width: 100vw;
@@ -92,6 +70,91 @@ p{
 font-size: 17px;
 width: 320px;
 }
+
+
+${theme.breakpoints.lg}{
+
+
+
+
+.solucao{
+	height: 900px;
+
+	p{
+margin: 8px auto;
+width: 700px;
+
+	}
+
+
+button{
+position: relative;
+top: 25px;
+right: 50%;
+}
+
+}
+
+.missaoValores{
+	height: 450px;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+width: 100vw;
+img{
+	width:220px;
+}
+p{
+width: 200px;
+}
+
+}
+
+}
+
+
+
+${theme.breakpoints.xl}{
+
+.solucao{
+	display: flex;
+	justify-content: space-around;
+height: 400px;
+p{
+width: 900px;
+letter-spacing: 1px;
+margin: 25px;
+}
+
+
+
+img{
+	height: 250px;
+	width: 200px;
+}
+
+}
+
+
+.missaoValores{
+
+height: 550px;
+text-align: center;
+width: 80%;
+margin: 2px auto;
+img{
+	width:320px;
+}
+
+p{
+	margin: 10px auto;
+	width: 300px;
+}
+
+}
+
+}
+
+
 
 
 `}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import * as Styled from "./styles";
 import { MyLink } from "../../components/Link";
 import { MdOutlineEmail, MdOutlineKeyboardArrowDown } from "react-icons/md";
@@ -22,7 +22,7 @@ export const Menu = () => {
     return target;
   }
 
-  (() => {
+  const handleHover = () => {
     const detailsCollection = document.getElementsByTagName("details");
 
     for (let [key, details] of Object.entries(detailsCollection)) {
@@ -42,7 +42,13 @@ export const Menu = () => {
         details.open = false;
       }
     });
-  })();
+  };
+
+  useEffect(() => {
+    return () => {
+      handleHover();
+    };
+  }, []);
 
   return (
     <Styled.Menu menu={menu}>
@@ -68,7 +74,7 @@ export const Menu = () => {
         <img src={logo} alt="logo" />
       </div>
 
-      <ul>
+      <ul className="listaMenu">
         <summary className="titulo">
           <MyLink>HOME</MyLink>{" "}
         </summary>
@@ -93,8 +99,8 @@ export const Menu = () => {
 
           <div className="infor">
             <MyLink href="/climatizacao">Climatização</MyLink>
-            <MyLink>Locação de mão de obra</MyLink>
-            <MyLink>Manutenção Predial</MyLink>
+            <MyLink href="/maoDeObra">Locação de mão de obra</MyLink>
+            <MyLink href="manutencaopredial">Manutenção </MyLink>
             <MyLink>Aluquel de Maquinas e equipamentos</MyLink>
             <MyLink>Comercio varejista</MyLink>
             <MyLink>Segurança eletrônica</MyLink>
