@@ -31,7 +31,6 @@ export const Menu = () => {
         if (typeof target != "undefined") {
           target.open = true;
         }
-        return details;
       };
     }
 
@@ -48,8 +47,9 @@ export const Menu = () => {
   useEffect(() => {
     return () => {
       handleHover();
+      console.log("te");
     };
-  }, []);
+  });
 
   return (
     <Styled.Menu menu={menu}>
