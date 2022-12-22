@@ -5,6 +5,7 @@ import { Image } from "../../../components/Image";
 import { Button } from "../../../components/Buttom/Button";
 import { MenuSecundario } from "../../../components/MenuSecundario/MenuSecundario";
 import solucao from "../../../assets/solucao.png";
+import conduta from "../../../assets/conduta.pdf";
 
 export const About = () => {
   const menu = [
@@ -49,7 +50,12 @@ export const About = () => {
         <div>
           <Image src={solucao} />
 
-          <Button> DOWNLOAD </Button>
+          <Button>
+            {" "}
+            <a href={conduta} download>
+              DOWNLOAD
+            </a>{" "}
+          </Button>
         </div>
       </article>
 

@@ -25,19 +25,20 @@ export const Menu = () => {
   const handleHover = () => {
     const detailsCollection = document.getElementsByTagName("details");
 
-    for (let [key, details] of Object.entries(detailsCollection)) {
+    for (let [i, details] of Object.entries(detailsCollection)) {
       details.onmouseover = (mouseEvent) => {
         const target = getDetails(mouseEvent);
         if (typeof target != "undefined") {
           target.open = true;
         }
+        return details;
       };
     }
 
     document.addEventListener("mouseover", (mouseEvent) => {
       for (let [key, details] of Object.entries(detailsCollection)) {
         if (details.matches(":hover")) {
-          return;
+          return details;
         }
         details.open = false;
       }

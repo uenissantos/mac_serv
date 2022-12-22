@@ -183,23 +183,29 @@ width: 320px;
 
 
 button{
+transition: 3s ease-in-out;
+
 margin-top: 25px;
 	background-color: transparent;
 	border:2px solid #ffffff;
 	width: 194px;
 	height: 47px;
-
 overflow: hidden;
+a{
+	transition: 3s ease-in-out;
+
+}
 
 &:hover{
 border: none;
 a{
-	left: 0px;
+	left: -20px;
 }
 
 
 svg{
-	right:0px;
+	right:-5px;
+
 }
 
 }

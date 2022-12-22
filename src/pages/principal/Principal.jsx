@@ -25,9 +25,15 @@ export const Principal = () => {
   return (
     <Styled.Principal>
       <div className="carousel">
-        <Carousel autoPlay={true} infiniteLoop={true}>
+        <Carousel
+          autoPlay={true}
+          infiniteLoop={true}
+          autoFocus={true}
+          showStatus={false}
+          showThumbs={false}
+        >
           <div>
-            <Image src={maodeobra} />
+            <Image src={maodeobra} alt="conservação patrimonial" />
             <div className="tituloCarousel"></div>
 
             <div className="itenTitle">
@@ -43,7 +49,7 @@ export const Principal = () => {
           </div>
 
           <div>
-            <Image src={manutencao} />
+            <Image src={manutencao} alt="manutençao" />
 
             <div className="tituloCarousel"></div>
             <div className="itenTitle">
@@ -59,7 +65,7 @@ export const Principal = () => {
           </div>
 
           <div>
-            <Image src={seguranca} />
+            <Image src={seguranca} alt="segurança eletronica" />
             <div className="tituloCarousel"></div>
 
             <div className="itenTitle">
@@ -171,9 +177,8 @@ export const Principal = () => {
         <Text as="h2"> </Text>
         <Button>
           <MyLink src="">
-            {" "}
-            ENVIAR E-MAIL <RiArrowRightSLine />{" "}
-          </MyLink>{" "}
+            ENVIAR E-MAIL <RiArrowRightSLine />
+          </MyLink>
         </Button>
       </div>
     </Styled.Principal>

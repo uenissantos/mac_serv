@@ -76,8 +76,6 @@ export const Orcamento = () => {
             value=".?message=Email+could+not+be+sent.&isError=1"
           />
 
-          <Input type="hidden" name="sms_format" value="true" />
-
           <Input
             id="submit_form"
             type="submit"

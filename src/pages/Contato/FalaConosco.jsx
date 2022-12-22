@@ -9,7 +9,7 @@ import { Image } from "../../components/Image";
 import solucao from "../../assets/solucao.png";
 
 export const FaleConosco = () => {
-  const sendEmail = () => {
+  /*   const sendEmail = () => {
     var submitButton = document.getElementById("submit_form");
     var form = document.getElementById("email_form");
     form.addEventListener("submit", function (e) {
@@ -18,7 +18,7 @@ export const FaleConosco = () => {
         submitButton.disabled = true;
       }, 1);
     });
-  };
+  }; */
 
   return (
     <Styled.FaleConosco>
@@ -65,14 +65,7 @@ export const FaleConosco = () => {
             value=".?message=Email+could+not+be+sent.&isError=1"
           />
 
-          <Input type="hidden" name="sms_format" value="true" />
-
-          <Input
-            id="submit_form"
-            type="submit"
-            value="Enviar mensagem"
-            onClick={sendEmail}
-          />
+          <Input id="submit_form" type="submit" value="Enviar mensagem" />
         </form>
 
         <Image src={solucao} alt="logo da empresa" />
