@@ -45,10 +45,7 @@ export const Menu = () => {
   };
 
   useEffect(() => {
-    return () => {
-      handleHover();
-      console.log("te");
-    };
+    handleHover();
   });
 
   return (
