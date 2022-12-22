@@ -15,36 +15,32 @@ export const Footer = () => {
   return (
     <Styled.Footer>
       <article className="footer">
-        {" "}
         <section className="endereco">
           <Image src={logo3} />
           <Text>Rua Dr. Télio Barreto, 326 - Sala 102</Text>
           <Text>Centro - Macaé/RJ CEP: 27.910-060. </Text>
 
-          <MyLink>
-            {" "}
-            <BsFillTelephoneFill /> +55 22 2791-6524{" "}
-          </MyLink>
+          <a href="tel:+5521999999999">
+            <BsFillTelephoneFill /> +55 22 2791-6524
+          </a>
 
-          <MyLink classe={"email"}>
-            {" "}
+          <a classe="email" href="mailto:webmaster@example.com">
             <MdOutlineEmail />
-            contato@primefacility.com.br{" "}
-          </MyLink>
+            contato@MacServ.com.br
+          </a>
         </section>
         <section className="contato">
           <Text as="h3">Acesso Rápido</Text>
 
           <MyLink href="/">Home</MyLink>
           <MyLink href="/sobre">Empresa</MyLink>
-          <MyLink src="/orcamento">Orçamento</MyLink>
-          <MyLink src="/comunicacao">Fale conosco</MyLink>
+          <MyLink href="/orcamento">Orçamento</MyLink>
+          <MyLink href="/faleconosco">Fale conosco</MyLink>
         </section>
         <section className="social">
           <Text as="h2">Linkedin Company Page</Text>
 
           <MyLink>
-            {" "}
             <RiLinkedinFill />
           </MyLink>
         </section>
@@ -52,7 +48,7 @@ export const Footer = () => {
 
       <section className="meuContato">
         <Text as="h2">© 2022 MacServ • Desenvolvido por </Text>
-        <MyLink>
+        <MyLink href=" https:/com.br/site/ ">
           <Image src={uenis} alt="criador do site" />
         </MyLink>
       </section>

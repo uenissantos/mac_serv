@@ -1,12 +1,20 @@
 import React from "react";
+
 import * as Styled from "./styles";
-import { Image } from "../../components/Image";
+
+import logo2 from "../../assets/logo2.png";
+import solucao from "../../assets/solucao.png";
+import seguranca from "../../assets/seguranca.png";
+import manutencao from "../../assets/manutencao.png";
+import maodeobra from "../../assets/maodeobra.png";
+
 import { Text } from "../../components/Text/Text";
 import { MyLink } from "../../components/Link";
-import logo2 from "../../assets/logo2.png";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
 import { Button } from "../../components/Buttom/Button";
+import { Image } from "../../components/Image";
+
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { SlUser, SlDocs, SlLocationPin, SlDoc } from "react-icons/sl";
@@ -19,42 +27,51 @@ export const Principal = () => {
       <div className="carousel">
         <Carousel autoPlay={true} infiniteLoop={true}>
           <div>
-            <Image src="https://www.primefacility.com.br/site/img/revolution/asseio-e-conservacao-patrimonial.jpg" />
-            <div className="tituloCarousel">
+            <Image src={maodeobra} />
+            <div className="tituloCarousel"></div>
+
+            <div className="itenTitle">
               <h2> Asseio e Conservação Patrimonial</h2>
               <p>
-                {" "}
-                Os servilos de asseios, conservação e limpeza são decisivos na
+                Os serviços de asseios, conservação e limpeza são decisivos na
                 hora de explora a boa imagem de uma empresa
               </p>
-              <Button> SAIBA MAIS</Button>
+              <Button>
+                <MyLink href="/maoDeObra">SAIBA MAIS</MyLink>
+              </Button>
             </div>
           </div>
-          <div>
-            <Image src="https://www.primefacility.com.br/site/img/revolution/servicos-de-manutencao.jpg" />
 
-            <div className="tituloCarousel">
+          <div>
+            <Image src={manutencao} />
+
+            <div className="tituloCarousel"></div>
+            <div className="itenTitle">
               <h2>Serviços de manutenção</h2>
               <p>
-                {" "}
                 MacServ possui setor especifico para area de manutenção, com
                 pessoal qualificado de acordo com as normas regulamentadoras
               </p>
-              <Button> SAIBA MAIS</Button>
+              <Button>
+                <MyLink href="/manutencaopredial">SAIBA MAIS</MyLink>
+              </Button>
             </div>
           </div>
-          <div>
-            <Image src="https://www.primefacility.com.br/site/img/revolution/seguranca-eletronica.jpg" />
 
-            <div className="tituloCarousel">
+          <div>
+            <Image src={seguranca} />
+            <div className="tituloCarousel"></div>
+
+            <div className="itenTitle">
               <h2> Segurança eletrônica</h2>
 
               <p>
-                {" "}
                 MacServ disponibiliza uma moderna soluçao em monitoramento de
                 imagens, manutenção preventiva e corretiva{" "}
               </p>
-              <Button> SAIBA MAIS</Button>
+              <Button>
+                <MyLink href="/seguranca">SAIBA MAIS</MyLink>
+              </Button>
             </div>
           </div>
         </Carousel>
@@ -71,7 +88,7 @@ export const Principal = () => {
 
       <div className="apresentacao">
         <div>
-          <Image src="https://www.primefacility.com.br/site/img/about_us.jpg" />
+          <Image src={solucao} />
         </div>
         <div>
           <Text>

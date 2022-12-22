@@ -16,7 +16,12 @@ h2{
      padding: 7px;
 }
 
-a{ font-size: 15px;}
+a{ font-size: 15px;
+
+:hover{
+	color: red;
+}
+}
 
 .endereco{
 	display: flex;
@@ -43,7 +48,10 @@ svg{
 
 
 .email{
-	color: #ffffff;
+
+			color: red;
+
+
 svg{
 
 	height: 25px;
@@ -81,7 +89,13 @@ border-top: 1px solid ${theme.colors.font};
 font-size: 15px;
 color: white;
 width: 90%;
-margin-top: 20px;
+height: 10px;
+padding: 20px;
+
+&:hover{
+	color: red;
+}
+
 }
 
 }

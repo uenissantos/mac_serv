@@ -11,21 +11,33 @@ align-items: center;
 
 
 .tituloCarousel{
-display: flex;
-flex-direction: column;
-align-items: center;
-position: absolute;
-top: 80px;
-width: 80vw;
-margin: 25px auto;
-color: white;
-left: 0;
-right: 0;
 
+position: absolute;
+top: -25px;
+margin: 25px auto;
+background-color:#000000 ;
+opacity: 0.7;
+width: 100%;
+height: 100%;
+
+
+
+}
+
+.itenTitle{
+	display: flex;
+flex-direction: column;
+position: absolute;
+width: 100vw;
+top: 10vh;
+height: 20vh;
+color: #ffffff;
+	align-items: center;
+	justify-content: space-around;
 
 h2{
-	margin: 25px;
-font-size: 22px;
+/* 	margin: 25px;
+ */font-size: 22px;
 width: 250px;
 font-weight: bold;
 }
@@ -37,13 +49,13 @@ p{
 }
 
 button{
-margin-top: 30px;
-
+a{
+	color:${theme.colors.black} ;
+	font-size: 12px;
 }
 
 }
-
-
+}
 
 
 
@@ -84,17 +96,16 @@ background-color: ${theme.colors.black};
 margin-top: 85px;
 overflow-y: hidden;
 img{
-
-margin: 0  0 45px 0;
-	width: 100%;
-	height: 401px;
+width: 100%;
+height: 70vh;
+margin: auto;
 }
 
 
 p{
 	font-size: 18px;
 	color:${theme.colors.ligth};
-width:350px;
+max-width:350px;
 margin: 2px auto;
 }
 
@@ -152,6 +163,7 @@ p{
 }
 
 .enviarEmail{
+
 	margin: 45px auto 0px auto;
 	background-color:${theme.colors.primaryColor};
 	display: flex;
@@ -226,15 +238,8 @@ svg{
 
 ${theme.breakpoints.lg}{
 
-	.tituloCarousel{
-h2{
-	font-size: 28px;
-	width: 450px;
-
-}
-p{
-		 display: flex;
-	}
+.itenTitle{
+	top: 7px;
 }
 
 p{
@@ -248,12 +253,6 @@ p{
 
 
 .apresentacao{
-
-img{
-	height: 500px;
-}
-
-
 
 p{
 width: 440px;
@@ -281,31 +280,36 @@ h2{
 }
 
 }
+
+
+
+
+
+
 ${theme.breakpoints.xl}{
 
-
-.tituloCarousel{
+.itenTitle{
+height: 400px;
+top:7px ;
 h2{
-	font-size:50px;
-	width: 90%;
-
+	font-size: 54px;
+	width: 500px;
+margin-top: 45px;
 }
-
 
 p{
-
+	display: flex;
 	font-size: 24px;
-	width: 800px;
+	width: 600px;
 
 }
-
-
 }
+
 
 
 .carousel{
 	height: 70vh;
-
+width: 99vw;
 img{
 	height: 100%;
 }
@@ -324,11 +328,20 @@ img{
 
 .apresentacao{
 	display: flex;
-height: 460px;
+height: 560px;
 	align-items: center;
 
+
+	img{
+		width: 30vw;
+		height: 62vh;
+		margin-top: 30px;
+		margin-left: 85px;
+		border-radius: 10px;
+	}
+
 p{
-	margin-left: 45px;
+	margin-left: 10rem;
 }
 }
 

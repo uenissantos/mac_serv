@@ -14,9 +14,10 @@ margin: 25px auto;
 height: auto;
 width: 340px;
 border-radius: 5px;
-	filter:sepia(70%);
+	filter:sepia(40%);
 	:hover {
-		transform: scaleX(-1);
+		position: relative;
+		width: 500px;
 		filter:sepia(10%);
 
 

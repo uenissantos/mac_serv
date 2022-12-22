@@ -101,15 +101,17 @@ export const Menu = () => {
             <MyLink href="/climatizacao">Climatização</MyLink>
             <MyLink href="/maoDeObra">Locação de mão de obra</MyLink>
             <MyLink href="manutencaopredial">Manutenção </MyLink>
-            <MyLink>Aluquel de Maquinas e equipamentos</MyLink>
-            <MyLink>Comercio varejista</MyLink>
-            <MyLink>Segurança eletrônica</MyLink>
+            <MyLink href="/aluguelequipamentos">
+              Aluquel de Maquinas e equipamentos
+            </MyLink>
+            <MyLink href="/comercio">Comercio varejista</MyLink>
+            <MyLink href="/seguranca">Segurança eletrônica</MyLink>
           </div>
         </details>
 
         <summary className="titulo">
           {" "}
-          <MyLink>ORCAMENTO</MyLink>{" "}
+          <MyLink href="/orcamento">ORCAMENTO</MyLink>{" "}
         </summary>
 
         <details>
@@ -118,8 +120,8 @@ export const Menu = () => {
           </summary>
 
           <div className="infor">
-            <MyLink>Fale Conosco</MyLink>
-            <MyLink>Trabahe Conosco</MyLink>
+            <MyLink href="/faleconosco">Fale Conosco</MyLink>
+            <MyLink href="/trabalheconosco">Trabahe Conosco</MyLink>
           </div>
         </details>
       </ul>

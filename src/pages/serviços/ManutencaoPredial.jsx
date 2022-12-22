@@ -54,7 +54,7 @@ export const ManutencaoPredial = () => {
 
     {
       children: <AiOutlineCheckCircle />,
-      title: "Limpeza industrial,comercial,predial .",
+      title: "Limpeza industrial,comercial,predial ",
       href: "",
       newTab: false,
     },

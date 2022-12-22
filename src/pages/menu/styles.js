@@ -136,15 +136,18 @@ summary{
 height: 55px;
 
 }
+
+
 .infor{
 	margin-top: -25px;
 	display: flex;
 	flex-direction: column;
+
 	a{
 		color: gray;
 		height: 40px;
 		border-top: 1px solid ${theme.colors.border};
-		padding:10px 25px 0;
+		padding:10px 25px ;
 
 		&:hover{
 	color:${theme.colors.secundaryColor}
@@ -197,6 +200,11 @@ z-index: 25;
 position: absolute;
 margin-top: 1px;
 border-top: 2px solid ${theme.colors.secundaryColor};
+
+a{
+	margin-bottom: 10px;
+}
+
 }
 }
 `}
