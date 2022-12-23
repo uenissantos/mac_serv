@@ -191,10 +191,6 @@ margin-top: 25px;
 	width: 194px;
 	height: 47px;
 overflow: hidden;
-a{
-	transition: 3s ease-in-out;
-
-}
 
 &:hover{
 border: none;
@@ -204,7 +200,7 @@ a{
 
 
 svg{
-	right:-5px;
+	right:0px;
 
 }
 

@@ -9,7 +9,7 @@ import { MenuSecundario } from "../../../components/MenuSecundario/MenuSecundari
 import conduta from "../../../assets/conduta.png";
 import direitos from "../../../assets/direitos.png";
 import corrupcao from "../../../assets/corrupcao.png";
-
+import codgoconduta from "../../../assets/codgoconduta.pdf";
 export const Politica = () => {
   const menu = [
     { children: "Home/", href: "/", newTab: false },
@@ -28,7 +28,11 @@ export const Politica = () => {
       <article className="politica">
         <div className="itensPolitica">
           <Image src={conduta} alt="  codigo de conduta" />
-          <Button>DOWNLOAD</Button>
+          <Button>
+            <a href={codgoconduta} download>
+              DOWNLOAD
+            </a>
+          </Button>
         </div>
 
         <div className="itensPolitica">

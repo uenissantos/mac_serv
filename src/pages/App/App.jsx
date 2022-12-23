@@ -36,7 +36,7 @@ function App() {
           <Route path="/orcamento" element={<Orcamento />} />
 
           <Route path="/faleconosco" element={<FaleConosco />} />
-          <Route path="/conosco" element={<TrabalheConosco />} />
+          <Route path="/trabalheconosco" element={<TrabalheConosco />} />
 
           <Route path="*" element={<PageNotFound />} />
         </Route>

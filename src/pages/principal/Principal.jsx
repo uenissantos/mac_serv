@@ -26,7 +26,7 @@ export const Principal = () => {
     <Styled.Principal>
       <div className="carousel">
         <Carousel
-          autoPlay={true}
+          autoPlay={false}
           infiniteLoop={true}
           autoFocus={true}
           showStatus={false}
@@ -36,7 +36,7 @@ export const Principal = () => {
             <Image src={maodeobra} alt="conservação patrimonial" />
             <div className="tituloCarousel"></div>
 
-            <div className="itenTitle">
+            <div className="itenTitle  slideTitle">
               <h2> Asseio e Conservação Patrimonial</h2>
               <p>
                 Os serviços de asseios, conservação e limpeza são decisivos na
@@ -49,10 +49,10 @@ export const Principal = () => {
           </div>
 
           <div>
-            <Image src={manutencao} alt="manutençao" />
+            <Image src={manutencao} alt="manutençao " />
 
             <div className="tituloCarousel"></div>
-            <div className="itenTitle">
+            <div className="itenTitle ">
               <h2>Serviços de manutenção</h2>
               <p>
                 MacServ possui setor especifico para area de manutenção, com
@@ -68,7 +68,7 @@ export const Principal = () => {
             <Image src={seguranca} alt="segurança eletronica" />
             <div className="tituloCarousel"></div>
 
-            <div className="itenTitle">
+            <div className="itenTitle animated bounceInUp">
               <h2> Segurança eletrônica</h2>
 
               <p>

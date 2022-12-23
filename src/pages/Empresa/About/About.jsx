@@ -5,7 +5,7 @@ import { Image } from "../../../components/Image";
 import { Button } from "../../../components/Buttom/Button";
 import { MenuSecundario } from "../../../components/MenuSecundario/MenuSecundario";
 import solucao from "../../../assets/solucao.png";
-import conduta from "../../../assets/conduta.pdf";
+import folder from "../../../assets/folder.pdf";
 
 export const About = () => {
   const menu = [
@@ -51,8 +51,7 @@ export const About = () => {
           <Image src={solucao} />
 
           <Button>
-            {" "}
-            <a href={conduta} download>
+            <a href={folder} download>
               DOWNLOAD
             </a>{" "}
           </Button>
