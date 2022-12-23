@@ -37,6 +37,7 @@ button{
 	font-size: 13px;
 	width: 164px;
 	height: 43px;
+
 }
 
 
@@ -91,6 +92,11 @@ button{
 position: relative;
 top: 25px;
 right: 50%;
+
+a{
+	color: #ffffff;
+}
+
 }
 
 }

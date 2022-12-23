@@ -40,6 +40,9 @@ flex-direction: column;
 	font-size: 13px;
 	width: 164px;
 	height: 43px;
+	a{
+		color: #ffffff;
+	}
 }
 
 
