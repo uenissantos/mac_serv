@@ -10,6 +10,9 @@ import conduta from "../../../assets/conduta.png";
 import direitos from "../../../assets/direitos.png";
 import corrupcao from "../../../assets/corrupcao.png";
 import codgoconduta from "../../../assets/codgoconduta.pdf";
+import direito from "../../../assets/direitos.pdf";
+import anticorrupcao from "../../../assets/anticorrupcao.pdf";
+
 export const Politica = () => {
   const menu = [
     { children: "Home/", href: "/", newTab: false },
@@ -37,12 +40,22 @@ export const Politica = () => {
 
         <div className="itensPolitica">
           <Image src={direitos} alt=" politica de direitos humanos" />
-          <Button>DOWNLOAD</Button>
+          <Button>
+            {" "}
+            <a href={direito} download>
+              DOWNLOAD
+            </a>
+          </Button>
         </div>
 
         <div className="itensPolitica">
           <Image src={corrupcao} alt="politica de corrupção" />
-          <Button>DOWNLOAD</Button>
+          <Button>
+            {" "}
+            <a href={anticorrupcao} download>
+              DOWNLOAD
+            </a>
+          </Button>
         </div>
       </article>
     </Styled.Politica>
