@@ -20,7 +20,10 @@ a{
 
 }
 
+button{
+	cursor: pointer;
 
+}
 
 `}
 `

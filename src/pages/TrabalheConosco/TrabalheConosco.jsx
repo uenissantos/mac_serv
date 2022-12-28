@@ -3,6 +3,8 @@ import { MenuSecundario } from "../../components/MenuSecundario/MenuSecundario";
 import * as Styled from "./styles";
 import { app } from "../../FaribaseConfig/Firebase";
 import solucao from "../../assets/solucao.png";
+import pdf from "../../assets/pdf.png";
+import { Button } from "../../components/Buttom/Button";
 import { Image } from "../../components/Image";
 import {
   getFirestore,
@@ -17,7 +19,7 @@ import { storage } from "../../FaribaseConfig/Firebase";
 import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 
 export const TrabalheConosco = () => {
-  const [logado, setlogado] = useState(true);
+  const [admin, setadmin] = useState(false);
 
   let email = "uenis@gmail.com";
   let password = "12345678";
@@ -28,7 +30,7 @@ export const TrabalheConosco = () => {
       password;
       const user = userCredential.user;
 
-      setlogado(true);
+      setadmin(true);
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -139,60 +141,78 @@ export const TrabalheConosco = () => {
 
   return (
     <Styled.TrabalheConosco>
-      <MenuSecundario menu={menu} title={"Trabalhe conosco"} />
-
-      <div>
-        <input
-          type="text"
-          placeholder="Nome"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <input
-          type="email"
-          placeholder="E-mail"
-          value={curriculo}
-          onChange={(e) => setcurriculo(e.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="curriculo"
-          value={imgURL}
-          onChange={(e) => setImage(e.target.value)}
-        />
+      {/*    <div className="Administrador">
+        <Button>Administrador</Button>
       </div>
-      <form onSubmit={handleSubmit}>
-        <input type="file" className="input4" />
-        {success && (
-          <p>
-            informações anexadas com sucesso , a pagina será atualizada ao
-            enviar
-          </p>
-        )}
-        <button id="enviar"> {progressPorcent}</button>
-      </form>
 
-      <br />
-      <br />
-      <br />
-      <hr />
-      <div>
-        {logado &&
+      <div className="login">
+        <form>
+          <input type="email" placeholder="Email" />
+          <input type="number" placeholder="senha" />
+        </form>
+      </div> */}
+
+      <MenuSecundario menu={menu} title={"Tabalhe conosco"} />
+
+      {admin == false && (
+        <div className="formulario">
+          <input
+            type="text"
+            placeholder="Nome"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <input
+            type="email"
+            placeholder="E-mail"
+            value={curriculo}
+            onChange={(e) => setcurriculo(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="curriculo"
+            value={imgURL}
+            onChange={(e) => setImage(e.target.value)}
+          />
+        </div>
+      )}
+      {admin == false && (
+        <form onSubmit={handleSubmit}>
+          <input type="file" className="input4" />
+          {success && (
+            <p>
+              informações anexadas com sucesso , a pagina será atualizada ao
+              enviar
+            </p>
+          )}
+          <button id="enviar"> {progressPorcent}</button>
+        </form>
+      )}
+
+      <div className="admin">
+        {admin &&
           users.map((user) => {
             return (
               <ul key={user.id}>
-                <li> {user.name}</li>
-                <li>{user.curriculo}</li>
+                <li className="name"> {user.name}</li>
+                <li className="email">
+                  {" "}
+                  <a href={`mailto:${user.curriculo}`}>{user.curriculo} </a>
+                </li>
 
-                <li>
-                  <img src={user.imgURL} alt="" />
+                <li className="curriculo">
+                  <p className="baixar"> visualizar curriculo</p>
+                  <a href={user.imgURL} download>
+                    {" "}
+                    <Image src={pdf} alt="baixar curriculo" />{" "}
+                  </a>
                 </li>
                 <button onClick={() => deleteUser(user.id)}>Deletar</button>
               </ul>
             );
           })}
       </div>
-      <Image src={solucao} />
+      <Image className={"image"} src={solucao} />
     </Styled.TrabalheConosco>
   );
 };
