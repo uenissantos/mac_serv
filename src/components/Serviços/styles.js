@@ -170,7 +170,7 @@ height: 400px;
 
 .wrapper{
 
-	margin: 85px auto ;
+	margin: 155px auto ;
 	width: 80vw;
 	grid-template-columns: 1fr 1fr 1fr;
 }

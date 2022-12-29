@@ -26,7 +26,7 @@ export const Principal = () => {
     <Styled.Principal>
       <div className="carousel">
         <Carousel
-          autoPlay={false}
+          autoPlay={true}
           infiniteLoop={true}
           autoFocus={true}
           showStatus={false}

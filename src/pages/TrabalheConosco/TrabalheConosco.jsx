@@ -6,6 +6,8 @@ import solucao from "../../assets/solucao.png";
 import pdf from "../../assets/pdf.png";
 import { Button } from "../../components/Buttom/Button";
 import { Image } from "../../components/Image";
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+
 import {
   getFirestore,
   collection,
@@ -20,22 +22,11 @@ import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 
 export const TrabalheConosco = () => {
   const [admin, setadmin] = useState(false);
-
-  let email = "uenis@gmail.com";
-  let password = "12345678";
-  const auth = getAuth();
-  signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      email;
-      password;
-      const user = userCredential.user;
-
-      setadmin(true);
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-    });
+  const [moldalLogin, setMoldalLogin] = useState(false);
+  const moldalView = () => setMoldalLogin(!moldalLogin);
+  const [emailAdm, setEmailAdm] = useState();
+  const [senhaAdm, setsenhaAdm] = useState();
+  console.log(moldalLogin);
 
   /////////////////////////////////////////////////////////
   const [imgURL, setImgURL] = useState("");
@@ -45,7 +36,11 @@ export const TrabalheConosco = () => {
   const [success, setSuccess] = useState(false);
   const [curriculo, setcurriculo] = useState("");
   const [users, setUsers] = useState([]);
-
+  const [passwordType, setPasswordType] = useState("password");
+  const passwordView = () =>
+    passwordType === "password"
+      ? setPasswordType("text")
+      : setPasswordType("password");
   const db = getFirestore(app);
   const usersCollectionRef = collection(db, "candidato");
 
@@ -84,6 +79,25 @@ export const TrabalheConosco = () => {
     const userDoc = doc(db, "candidato", id);
     await deleteDoc(userDoc);
   }
+
+  const handleLOginAdmin = (event) => {
+    event.preventDefault();
+    let email = emailAdm;
+    let password = senhaAdm;
+    const auth = getAuth();
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        email, password;
+
+        const user = userCredential.user;
+        setMoldalLogin(false);
+        setadmin(true);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+      });
+  };
 
   const handleSubmit = (event) => {
     if (imgURL !== "") {
@@ -141,16 +155,37 @@ export const TrabalheConosco = () => {
 
   return (
     <Styled.TrabalheConosco>
-      {/*    <div className="Administrador">
-        <Button>Administrador</Button>
+      <div className="Administrador">
+        <Button click={() => moldalView()}>Administrador</Button>
       </div>
 
-      <div className="login">
-        <form>
-          <input type="email" placeholder="Email" />
-          <input type="number" placeholder="senha" />
-        </form>
-      </div> */}
+      {moldalLogin === true && (
+        <div className="login">
+          <form onSubmit={handleLOginAdmin}>
+            <input
+              type="email"
+              placeholder="Email"
+              value={emailAdm}
+              onChange={(e) => setEmailAdm(e.target.value)}
+            />
+            <input
+              type={passwordType}
+              placeholder="senha"
+              value={senhaAdm}
+              onChange={(e) => setsenhaAdm(e.target.value)}
+            />
+
+            <h2 onClick={() => passwordView()}>
+              {passwordType === "password" ? (
+                <AiOutlineEyeInvisible />
+              ) : (
+                <AiOutlineEye />
+              )}
+            </h2>
+            <Button> logar</Button>
+          </form>
+        </div>
+      )}
 
       <MenuSecundario menu={menu} title={"Tabalhe conosco"} />
 

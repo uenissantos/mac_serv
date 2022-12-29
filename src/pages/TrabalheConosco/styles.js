@@ -7,13 +7,46 @@ ${({ theme }) => css`
 
 width: 100%;
 overflow: hidden;
-
-
 .Administrador{
 position:relative;
 left: 50%;
+
+
+
+}
+
+
+
+.login{
+	z-index: 99;
+	position: absolute;
+align-items: center;
+justify-content: space-around;
+width: 80%;
+height: 200px;
+background-color: ${theme.colors.primaryColor};
+margin:  25px ;
+right: 0;
+left: 0;
+border-radius: 5px;
+button{
+	background-color: #ffffff;
+	color:${theme.colors.primaryColor} ;
+	margin: auto;
+	width: 200px;
+}
+
+svg{
+position:absolute;
+right: 30px;
+bottom: 75px;
+width: 20px;
+height: auto;
+}
+
 }
 .formulario{
+
 	display: flex;
 flex-direction: column;
 }
@@ -27,6 +60,8 @@ text-align: start;
 padding-left: 15px;
 align-items: center;
 overflow: hidden;
+border-radius: 5PX;
+
 
 
 
@@ -40,7 +75,8 @@ overflow: hidden;
 		position: absolute;
 		color: transparent;
 		background-color: transparent;
-height: 1px;
+height: 0px;
+width: 0px;
 margin-bottom: -5px;
 
 
@@ -109,6 +145,7 @@ width: 40%;
 height: 25px;
 border-radius: 5px;
 color: #ffffff;
+margin-bottom: 25px;
 
 }
 
@@ -223,13 +260,26 @@ font-size: 14px;
 
 ${theme.breakpoints.xl}{
 
-grid-template-columns: 1fr 1fr 1fr;
+	.admin{
+		grid-template-columns: 1fr 1fr 1fr;
+
+	}
 .Administrador{
 	left: 80%;
 }
 }
 
+.login{
+	width: 40%;
+	left:50%;
+}
 
+
+form{
+	p{
+		width: 450px;
+	}
+}
 
 `}
 `;
