@@ -237,7 +237,7 @@ export const TrabalheConosco = () => {
 
                 <li className="curriculo">
                   <p className="baixar"> visualizar curriculo</p>
-                  <a href={user.imgURL} download>
+                  <a href={user.imgURL} download target="_blank">
                     {" "}
                     <Image src={pdf} alt="baixar curriculo" />{" "}
                   </a>
